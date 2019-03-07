@@ -26,7 +26,7 @@ def nyc_pigeon_organizer(data)
       names.each do |name|
         if pigeon_list[name] == nil
           pigeon_list[name] = {trait => [type]}
-          binding.pry
+          #binding.pry
         elsif pigeon_list[name].keys.include?(trait) == false
           pigeon_list[name][trait] = [type]
         else
