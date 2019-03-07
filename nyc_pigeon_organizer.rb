@@ -27,8 +27,9 @@ def nyc_pigeon_organizer(data)
         if pigeon_list[name] == nil
           pigeon_list[name] = {trait: [type]}
           binding.pry
-        elsif pigeon_list[name][trait] == nil
-          
+        elsif pigeon_list[name].keys.include?(trait) == false
+          pigeon_list[name][trait] = [type]
+        else
           pigeon_list[name][trait].push(type)
         end
       end
