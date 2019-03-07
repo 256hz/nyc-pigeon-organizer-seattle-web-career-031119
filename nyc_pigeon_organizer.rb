@@ -28,9 +28,9 @@ def nyc_pigeon_organizer(data)
           pigeon_list[name] = {trait => [type.to_s]}
           #binding.pry
         elsif pigeon_list[name].keys.include?(trait) == false
-          pigeon_list[name][trait] = [type]
+          pigeon_list[name][trait] = [type.to_s]
         else
-          pigeon_list[name][trait].push(type)
+          pigeon_list[name][trait].push(type.to_s)
         end
       end
     end
